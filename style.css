@@ -14,7 +14,6 @@ nav{
     justify-content: center;
     gap: 500px;
     padding: 10px;
-    /* padding-top: 10px; */
 }
 .list{
     list-style: none;
@@ -22,7 +21,6 @@ nav{
     gap: 10px;
     position: relative;
     top: 10px;
-    /* padding-top: 10px; */
 }
 .normal-link{
     text-decoration: none;
@@ -43,12 +41,6 @@ nav{
     font-weight: 400;
     padding: 10px;
 }
-/* .carousel{
-    margin: auto;
-    background-color: ;
-    width: 550px;
-    height: 35vh;
-} */
 .div2{
     background-color: rgb(34,34,34);
     width: 660px;
@@ -67,11 +59,6 @@ nav{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
     padding: 10px;
-    /* display: flex; */
-    /* gap: 15px; */
-    /* justify-content: space-evenly; */
-    /* justify-content: space-between; */
-    /* justify-content: space-around; */
 }
 .font{
     font-size: 13px;
@@ -154,7 +141,6 @@ main{
     gap: 20px;
     position: relative;
     top: 8px;
-    /* padding: 20px; */
 }
 .normal-link2{
     text-decoration: none;
@@ -185,14 +171,60 @@ main{
     height: 30px;
 }
 
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+#menu-toggle {
+    display: none;
+}
+#menu-toggle:checked + .hamburger + .navburger {
+    display: flex;
+    height: 100vh;
+}
+.navburger {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+}
+.navburger li {
+    list-style: none;
+    text-align: left;
+    padding: 10px 0;
+    width: 100%;
+    font-weight: bold;
+}
+.navburger li a {
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
 
 @media screen and (max-width:576px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 0%;
+        left: 83%;
+    }
+    .div1{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-left: -60px;
+    }
+    .list{
+        display: none;
+    }
     .Body{
         display: block;
-        /* display: grid;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 10px;
-        padding: 0px 10px; */
     }
     main{
         background-color: rgb(34,34,34);
